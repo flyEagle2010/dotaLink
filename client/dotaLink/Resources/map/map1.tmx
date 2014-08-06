@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="18" tilewidth="50" tileheight="50">
+ <tileset firstgid="1" name="stormwind" tilewidth="50" tileheight="50">
+  <image source="stormwind.png" trans="ff00ff" width="1500" height="750"/>
+ </tileset>
+ <tileset firstgid="451" name="meta_tiles" tilewidth="32" tileheight="32">
+  <image source="../tilemap/meta_tiles.png" trans="ff00ff" width="67" height="34"/>
+ </tileset>
+ <layer name="bgLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgawIJCPGreqHmj5o2aRy/zqAUA6sU0gQ==
+  </data>
+ </layer>
+ <layer name="blockLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBga4DAjZRibeZS4ZdQ84u1AFx9I84hJH8PJv9Q0j1gwVM2jZvlCLQAAfl45bQ==
+  </data>
+ </layer>
+ <layer name="maskLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJy10UkOAVEQxvHXGzNbF2DF2gFYsXYHTsGKxB3MJO5gZmnmFGaO4L+Q6LzkJRXNS35JdSX1pSqdUEqFf2yBJVZYY4OtsN5hj4Mt74gTzrjgipuwvuOBpy3PZSnlhgde+OAX1gEEEbI+eRHqKL59MWbjtrwkdcpBXprZjGC/imFe7+eYzf8wT3qvNO/f9zrdT7/X6X76vab9eoY8vS/9v9In3U/69P0K1EUHeSVmy7a8KnUNdTTQRAttQ0//7qD7zsuiTz3AECOMMcHU0NO/Z5i/814aA1Kj
+  </data>
+ </layer>
+ <layer name="itemLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMBgBAAWgAAE=
+  </data>
+ </layer>
+ <objectgroup name="item" width="20" height="18">
+  <object name="hero" x="715" y="320"/>
+ </objectgroup>
+ <layer name="getLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4CBQZ/K5vlS2bxRMApGIgAAqz8AfQ==
+  </data>
+ </layer>
+</map>

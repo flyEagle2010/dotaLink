@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="4" height="4" tilewidth="750" tileheight="750">
+ <tileset firstgid="1" name="field" tilewidth="750" tileheight="750">
+  <image source="field.jpg" width="1500" height="1500"/>
+ </tileset>
+ <tileset firstgid="5" name="edge_1" tilewidth="750" tileheight="750">
+  <image source="edge_1.jpg" width="750" height="750"/>
+ </tileset>
+ <tileset firstgid="6" name="edge_2" tilewidth="750" tileheight="750">
+  <image source="edge_2.jpg" width="1500" height="750"/>
+ </tileset>
+ <tileset firstgid="8" name="edge_3" tilewidth="750" tileheight="750">
+  <image source="edge_3.jpg" width="750" height="750"/>
+ </tileset>
+ <tileset firstgid="9" name="edge_4" tilewidth="750" tileheight="750">
+  <image source="edge_4.jpg" width="750" height="1500"/>
+ </tileset>
+ <tileset firstgid="11" name="edge_5" tilewidth="750" tileheight="750">
+  <image source="edge_5.jpg" width="750" height="1500"/>
+ </tileset>
+ <tileset firstgid="13" name="edge_6" tilewidth="750" tileheight="750">
+  <image source="edge_6.jpg" width="750" height="750"/>
+ </tileset>
+ <tileset firstgid="14" name="edge_7" tilewidth="750" tileheight="750">
+  <image source="edge_7.jpg" width="1500" height="750"/>
+ </tileset>
+ <tileset firstgid="16" name="edge_8" tilewidth="750" tileheight="750">
+  <image source="edge_8.jpg" width="750" height="750"/>
+ </tileset>
+ <tileset firstgid="17" name="edge_0" tilewidth="750" tileheight="34">
+  <image source="edge_0.png" width="1500" height="34"/>
+ </tileset>
+ <tileset firstgid="19" name="ground" tilewidth="175" tileheight="175">
+  <image source="ground.png" width="875" height="875"/>
+  <tile id="0">
+   <properties>
+    <property name="id" value="tree_001"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="id" value="tree_003"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="field" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAEjEDMhMRnBmIWLOpAAAABcAAL
+  </data>
+ </layer>
+ <layer name="edge_8" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAfCAAxAACAABE=
+  </data>
+ </layer>
+ <layer name="edge_7" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAd8AExP5QNAAFgAB4=
+  </data>
+ </layer>
+ <layer name="edge_6" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAN8KLxAQEQAA4=
+  </data>
+ </layer>
+ <layer name="edge_5" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYMANuNH4PFjUAAACvAAY
+  </data>
+ </layer>
+ <layer name="edge_4" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYEAFnGh8Lgb8AAADMAAU
+  </data>
+ </layer>
+ <layer name="edge_3" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYEAADgbSAQAB4AAJ
+  </data>
+ </layer>
+ <layer name="edge_2" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgYANidgbyAAADMAAO
+  </data>
+ </layer>
+ <layer name="edge_1" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjZaAMAAABgAAG
+  </data>
+ </layer>
+ <layer name="edge_0" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAMBIFYCIccAAPMACQ=
+  </data>
+ </layer>
+ <layer name="building_layer" width="4" height="4">
+  <data encoding="base64" compression="zlib">
+   eJxjYCANqKHxAQKgACc=
+  </data>
+ </layer>
+ <objectgroup name="building" width="4" height="4">
+  <object gid="28" x="1095" y="1029"/>
+  <object gid="28" x="1157" y="1031"/>
+  <object gid="28" x="1213" y="1029"/>
+  <object gid="28" x="1265" y="1031"/>
+  <object gid="27" x="1282" y="1220"/>
+  <object gid="22" x="1262" y="1186"/>
+  <object gid="21" x="1290" y="1186"/>
+  <object gid="41" x="1519" y="1273"/>
+  <object gid="23" x="1277" y="1559"/>
+  <object gid="23" x="1814" y="2062"/>
+  <object gid="23" x="1465" y="2057"/>
+  <object gid="30" x="1275" y="1707"/>
+  <object gid="35" x="1531" y="1737"/>
+  <object gid="25" x="1845" y="1721"/>
+  <object gid="24" x="1115" y="1441"/>
+  <object gid="24" x="1121" y="1509"/>
+  <object gid="24" x="1117" y="1557"/>
+  <object gid="36" x="1573" y="1540"/>
+  <object gid="39" x="1849" y="1236"/>
+  <object gid="38" x="1575" y="1191"/>
+  <object gid="24" x="1478" y="1206"/>
+  <object gid="19" x="1529" y="1187"/>
+  <object gid="19" x="1463" y="1285"/>
+  <object gid="29" x="1569" y="1299"/>
+  <object gid="19" x="1592" y="1248"/>
+  <object gid="33" x="1440" y="2040"/>
+  <object gid="33" x="1838" y="2040"/>
+  <object gid="26" x="1749" y="1193"/>
+  <object gid="26" x="1753" y="1253"/>
+  <object gid="26" x="1757" y="1297"/>
+  <object gid="26" x="1813" y="1301"/>
+  <object gid="26" x="1867" y="1301"/>
+  <object gid="21" x="1789" y="1205"/>
+  <object gid="26" x="1743" y="1505"/>
+  <object gid="26" x="1749" y="1555"/>
+  <object gid="26" x="1747" y="1687"/>
+  <object gid="26" x="1747" y="1741"/>
+  <object gid="37" x="1787" y="1717"/>
+  <object gid="37" x="1789" y="1775"/>
+  <object gid="42" x="1855" y="1771"/>
+  <object gid="26" x="1537" y="2057"/>
+  <object gid="26" x="1745" y="2062"/>
+  <object gid="26" x="1610" y="2062"/>
+  <object gid="26" x="1675" y="2063"/>
+  <object gid="21" x="1495" y="2045"/>
+  <object gid="21" x="1575" y="2049"/>
+  <object gid="21" x="1657" y="2053"/>
+  <object gid="21" x="1716" y="2051"/>
+  <object gid="21" x="1778" y="2052"/>
+  <object gid="26" x="1283" y="2061"/>
+  <object gid="26" x="1107" y="2059"/>
+  <object gid="26" x="1169" y="2059"/>
+  <object gid="26" x="1225" y="2059"/>
+  <object gid="26" x="813" y="900"/>
+  <object gid="26" x="815" y="962"/>
+  <object gid="26" x="813" y="1026"/>
+  <object gid="26" x="813" y="1090"/>
+  <object gid="26" x="811" y="1158"/>
+  <object gid="26" x="885" y="900"/>
+  <object gid="26" x="959" y="898"/>
+  <object gid="26" x="1025" y="898"/>
+  <object gid="21" x="807" y="1228"/>
+  <object gid="21" x="807" y="1300"/>
+  <object gid="21" x="807" y="1364"/>
+  <object gid="21" x="809" y="1432"/>
+  <object gid="36" x="2075" y="1947"/>
+  <object gid="31" x="2057" y="1981"/>
+  <object gid="31" x="2059" y="2035"/>
+  <object gid="31" x="2055" y="2081"/>
+  <object gid="31" x="2059" y="2123"/>
+  <object gid="31" x="2057" y="2173"/>
+  <object gid="34" x="1453" y="1746"/>
+  <object gid="34" x="1452" y="1698"/>
+  <object gid="38" x="1576" y="1748"/>
+ </objectgroup>
+ <objectgroup name="block" width="4" height="4">
+  <object type="block" x="0" y="0" width="750" height="2325"/>
+  <object type="block" x="675" y="0" width="2325" height="750"/>
+  <object type="block" x="2250" y="675" width="750" height="2325"/>
+  <object type="block" x="0" y="2250" width="2325" height="750"/>
+ </objectgroup>
+ <objectgroup name="start" width="4" height="4">
+  <object type="start" x="1075" y="1287" width="23" height="23">
+   <properties>
+    <property name="dir" value="right"/>
+   </properties>
+  </object>
+  <object type="start" x="1999" y="1333" width="23" height="23">
+   <properties>
+    <property name="dir" value="left"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="goods" width="4" height="4">
+  <object type="goods" x="1505" y="1469" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1911" y="1460" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1170" y="2142" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="1744" y="2143" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1501" y="809" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1522" y="1837" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1603" y="1837" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1688" y="1838" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1777" y="1840" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1870" y="1842" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1824" y="2142" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1903" y="2142" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1660" y="2143" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1560" y="2141" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1449" y="2141" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1339" y="2146" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="993" y="2141" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="858" y="2142" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="862" y="2034" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="988" y="2036" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="986" y="1916" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="861" y="1917" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1608" y="810" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1723" y="809" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1829" y="810" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1377" y="811" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1184" y="1662" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="1870" y="1007" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="1168" y="1132" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="876" y="1566" width="17" height="17">
+   <properties>
+    <property name="cd" value="3"/>
+    <property name="drop" value="301001"/>
+    <property name="group" value="3001"/>
+   </properties>
+  </object>
+  <object type="goods" x="1580" y="1004" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="1879" y="2143" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="860" y="2007" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="876" y="1540" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="1533" y="1469" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+  <object type="goods" x="1910" y="1434" width="17" height="17">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="drop" value="301002"/>
+    <property name="group" value="3002"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="creep" width="4" height="4">
+  <object type="creep" x="1216" y="1814" width="64" height="62">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="group" value="4001"/>
+   </properties>
+  </object>
+  <object type="creep" x="1988" y="1796" width="64" height="62">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="group" value="4001"/>
+   </properties>
+  </object>
+  <object type="creep" x="2005" y="865" width="64" height="62">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="group" value="4001"/>
+   </properties>
+  </object>
+  <object type="creep" x="1408" y="1307" width="64" height="62">
+   <properties>
+    <property name="cd" value="2"/>
+    <property name="group" value="4001"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

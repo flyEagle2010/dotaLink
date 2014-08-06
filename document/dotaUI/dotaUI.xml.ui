@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>Z:\Documents\2dxProject\dota\dotaUI</ProjectDir>
+  <Version>1.4.0.1</Version>
+  <Resources>Z:\Documents\2dxProject\dota\dotaUI\Resources</Resources>
+  <Name>dotaUI</Name>
+  <JsonFileName>dotaUI.json</JsonFileName>
+  <JsonFolder>Z:\Documents\2dxProject\dota\dotaUI\Json</JsonFolder>
+  <JsonList>
+    <string>dotaUI_1.json</string>
+  </JsonList>
+  <CanvasSize>
+    <Width>0</Width>
+    <Height>0</Height>
+  </CanvasSize>
+  <filePath>Z:\Documents\2dxProject\dota\dotaUI\dotaUI.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList />
+  <imagePngList />
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>dotaUI_1.json</CurrentUIJson>
+</UIProject>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="18" tilewidth="150" tileheight="150">
+ <tileset firstgid="1" name="stormwind" tilewidth="150" tileheight="150">
+  <image source="stormwind.png" trans="ff00ff" width="1500" height="750"/>
+ </tileset>
+ <tileset firstgid="51" name="block" tilewidth="150" tileheight="150">
+  <image source="block.png" trans="ff00ff" width="300" height="150"/>
+  <tile id="0">
+   <properties>
+    <property name="isBlock" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="bgLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJzjZGBg4BzFo3gUj+JRPOgwALl9DKk=
+  </data>
+ </layer>
+ <layer name="maskLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjZWBgYB2BWAaIZcnEcljMU2MgH2gME/PksYgpUGAeNjENCs3TRcOUmkdN92lhEdOkwDxiwVA0zwCIDcnERljMG6wYAGAqDWM=
+  </data>
+ </layer>
+ <layer name="coverLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2B4A3YoppV5lJpPK/chY3TxUTA0AADtLABx
+  </data>
+ </layer>
+ <layer name="blockLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBiZwJhCjM08StwyHMwbCmLkxuVQFCMWDFXzqJl/BysAAB60DY0=
+  </data>
+ </layer>
+ <objectgroup name="items" width="20" height="18">
+  <object name="hero" x="1500" y="1800"/>
+  <object name="boss" x="1500" y="1050" width="150"/>
+  <object name="npc" x="1500" y="1050"/>
+  <object name="npc" x="900" y="750"/>
+  <object name="npc" x="1050" y="750"/>
+  <object name="npc" x="1350" y="750"/>
+  <object name="npc" x="1800" y="750"/>
+  <object name="npc" x="2250" y="750"/>
+  <object name="npc" x="2400" y="1650"/>
+  <object name="npc" x="2250" y="1950"/>
+  <object name="npc" x="1800" y="2100"/>
+  <object name="npc" x="1050" y="2100"/>
+  <object name="npc" x="600" y="2100"/>
+  <object name="npc" x="600" y="1650"/>
+  <object name="npc" x="750" y="1200"/>
+  <object name="npc" x="600" y="1200"/>
+ </objectgroup>
+ <layer name="pickLayer" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIw2oEODjEhtsYCi4cRSMAkoAAPL/AJE=
+  </data>
+ </layer>
+</map>

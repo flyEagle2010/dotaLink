@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="18" tilewidth="150" tileheight="150">
+ <tileset firstgid="1" name="stormwind" tilewidth="150" tileheight="150">
+  <image source="stormwind.png" width="1500" height="750"/>
+ </tileset>
+ <layer name="bg" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJzjYGBg4BjBmJNEPGreqHmj5g0e84Y7BgBYLwvR
+  </data>
+ </layer>
+ <objectgroup name="mask" width="20" height="18">
+  <properties>
+   <property name="transLayer" value="masklayer"/>
+  </properties>
+  <object gid="1" x="1159" y="1336"/>
+  <object gid="1" x="1255" y="1336"/>
+  <object gid="1" x="1351" y="1336"/>
+  <object gid="1" x="1447" y="1336"/>
+  <object gid="1" x="1543" y="1336"/>
+  <object gid="1" x="1640" y="1336"/>
+  <object gid="1" x="1737" y="1336"/>
+  <object gid="1" x="1159" y="1422"/>
+  <object gid="1" x="1159" y="1508"/>
+  <object gid="1" x="1159" y="1594"/>
+  <object gid="1" x="1159" y="1681"/>
+  <object gid="1" x="1159" y="1250"/>
+  <object gid="1" x="1159" y="1164"/>
+  <object gid="1" x="1158" y="1078"/>
+  <object gid="1" x="1737" y="1423"/>
+  <object gid="1" x="1737" y="1510"/>
+  <object gid="1" x="1738" y="1595"/>
+  <object gid="1" x="1737" y="1682"/>
+  <object gid="1" x="1737" y="1250"/>
+  <object gid="1" x="1737" y="1163"/>
+  <object gid="1" x="1738" y="1075"/>
+ </objectgroup>
+ <objectgroup name="build" width="20" height="18">
+  <properties>
+   <property name="isMask" value="1"/>
+   <property name="transLayer" value="buildlayer"/>
+  </properties>
+  <object gid="31" x="1156" y="1066"/>
+  <object gid="32" x="1736" y="1063"/>
+  <object gid="41" x="1736" y="1676"/>
+  <object gid="42" x="1161" y="1666"/>
+  <object gid="5" x="1726" y="1161"/>
+  <object gid="5" x="1727" y="1251"/>
+  <object gid="5" x="1725" y="1334"/>
+  <object gid="5" x="1725" y="1422"/>
+  <object gid="5" x="1726" y="1508"/>
+  <object gid="5" x="1726" y="1597"/>
+  <object gid="5" x="1148" y="1161"/>
+  <object gid="5" x="1144" y="1249"/>
+  <object gid="5" x="1147" y="1333"/>
+  <object gid="5" x="1149" y="1422"/>
+  <object gid="5" x="1150" y="1508"/>
+  <object gid="5" x="1149" y="1599"/>
+  <object gid="45" x="1256" y="1331"/>
+  <object gid="45" x="1350" y="1330"/>
+  <object gid="45" x="1445" y="1329"/>
+  <object gid="45" x="1543" y="1328"/>
+  <object gid="45" x="1640" y="1328"/>
+  <object x="1500" y="1500"/>
+ </objectgroup>
+ <objectgroup name="block" width="20" height="18">
+  <properties>
+   <property name="isBlock" value="1"/>
+  </properties>
+  <object x="3" y="0" width="2994" height="585"/>
+  <object x="9" y="2164" width="2988" height="530"/>
+  <object x="3" y="585" width="670" height="1579"/>
+  <object x="2318" y="576" width="679" height="1594"/>
+  <object x="1184" y="988" width="94" height="684"/>
+  <object x="1766" y="986" width="90" height="690"/>
+  <object x="1276" y="1246" width="488" height="88"/>
+ </objectgroup>
+ <objectgroup name="info" width="20" height="18">
+  <object name="boss" x="1529" y="1114"/>
+  <object name="npc" x="1239" y="1711"/>
+  <object name="npc" x="1808" y="1708"/>
+  <object name="npc" x="1236" y="1820"/>
+  <object name="npc" x="1236" y="1927"/>
+  <object name="npc" x="1237" y="2039"/>
+  <object name="npc" x="1804" y="1821"/>
+  <object name="npc" x="1807" y="1907"/>
+  <object name="npc" x="1801" y="2008"/>
+  <object name="npc" x="2103" y="2008"/>
+  <object name="npc" x="2101" y="1903"/>
+  <object name="npc" x="2104" y="1807"/>
+  <object name="npc" x="2104" y="1695"/>
+  <object name="npc" x="2099" y="1543"/>
+  <object name="npc" x="2105" y="1397"/>
+  <object name="npc" x="2105" y="1260"/>
+  <object name="npc" x="2105" y="1145"/>
+  <object name="npc" x="2112" y="1040"/>
+  <object name="npc" x="2111" y="883"/>
+  <object name="npc" x="2099" y="711"/>
+  <object name="npc" x="1909" y="705"/>
+  <object name="npc" x="1721" y="709"/>
+  <object name="npc" x="1572" y="707"/>
+  <object name="npc" x="1423" y="704"/>
+  <object name="npc" x="1257" y="711"/>
+  <object name="npc" x="1084" y="732"/>
+  <object name="npc" x="915" y="716"/>
+  <object name="npc" x="761" y="764"/>
+  <object name="npc" x="835" y="937"/>
+  <object name="npc" x="913" y="1153"/>
+  <object name="npc" x="920" y="1355"/>
+  <object name="npc" x="919" y="1520"/>
+  <object name="npc" x="915" y="1684"/>
+  <object name="npc" x="909" y="1869"/>
+  <object name="npc" x="932" y="2044"/>
+  <object name="born" x="1500" y="1545"/>
+ </objectgroup>
+ <layer name="tile" width="20" height="18">
+  <properties>
+   <property name="z" value="99999999"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBjZQAaIZYnEckSYp0aC3Rqj5uE0jxULppZ5g919uNw4HOJ3FJAGAKBhBL4=
+  </data>
+ </layer>
+ <layer name="buildlayer" width="20" height="18">
+  <properties>
+   <property name="removeOnLoaded" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQA3ARmXzAAeAAAc=
+  </data>
+ </layer>
+ <layer name="tileup" width="20" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAL6AAMgNiQSGw2QGwcTAACNSgJN
+  </data>
+ </layer>
+</map>
