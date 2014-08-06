@@ -35,11 +35,12 @@ public:
     void onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event);
     
     bool isblock(Vec2 pos);
-    
-    Vector<BNpc*> getTargets(std::vector<Vec2> arr,int type);
+    //type:1 npc 2 hero
+    Vector<BNpc*> getTargets(int xID,BNpc* attacker);
     
     void sortDepth();
 public:
+    Team* team;
 
 private:
     void createHero(int type); //1hero 2monster
@@ -57,6 +58,5 @@ private:
     TMXLayer* blockLayer;
     
     Vector<BNpc*> npcs;
-    Team* team;
 };
 #endif /* defined(__dotaLink__BattleMap__) */

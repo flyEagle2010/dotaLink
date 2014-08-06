@@ -29,14 +29,14 @@ public:
     void shoot(MNpc* npc);
     void hit(MNpc* npc);
 public:
-    MNpc* npc;
+    BNpc* npc;
 private:
     void coldDown();
     
 private:
     int skillID;
-    XSkill* xSkill;
     Vector<BNpc*> targets;
+    void selectTarget();
 };
 
 #endif /* defined(__dotaLink__Skill__) */

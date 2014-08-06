@@ -24,8 +24,8 @@ Skill* Skill::create(int skillID)
 bool Skill::init(int skillID)
 {
     this->skillID=skillID;
-    this->xSkill=XSkill::record(Value(skillID));
-    Director::getInstance()->getScheduler()->schedule(SEL_SCHEDULE(&Skill::coldDown),this,xSkill->getCd(),false);
+    XSkill* xskill=XSkill::record(Value(skillID));
+    Director::getInstance()->getScheduler()->schedule(SEL_SCHEDULE(&Skill::coldDown),this,xskill->getCd(),false);
     return true;
 }
 
@@ -67,6 +67,24 @@ void Skill::start()
 
 }
 
+void Skill::selectTarget()
+{
+    XSkill* xskill=XSkill::record(Value(skillID));
+    switch (xskill->getRange()) {
+        case 300: //self
+            this->targets.pushBack(this->npc);
+            break;
+        case 400: //team
+            this->targets=Manager::getInstance()->bmap->team->items;
+            break;
+        case 500: //none
+            break;
+        default:  //other
+            this->targets=Manager::getInstance()->bmap->getTargets(xskill->getRange(), this->npc);
+            break;
+    }
+}
+
 void Skill::coldDown()
 {
     this->setIsReady(true);
@@ -80,7 +98,7 @@ void Skill::coldDown()
 
 void Skill::shoot(MNpc* mh)
 {
-    this->npc->state=fstate::throwing;
+//    this->npc->state=fstate::throwing;
     Director::getInstance()->getScheduler()->schedule(SEL_SCHEDULE(&Skill::hit), this, 1,0,2, false);
     //int arrowType=XSkill::record(Value(skillID))->getArrowType();
     //this->attacker->shoot(mh,arrowType);

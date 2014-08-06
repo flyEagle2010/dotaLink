@@ -45,32 +45,3 @@ void Hero::update(float dt)
         }
     }
 }
-
-void Hero::run()
-{
-    this->state=HState::walk;
-//    this->walk();
-    
-//    Vec2 endPos=this->getEndPos();
-//    if(Manager::getInstance()->bmap && Manager::getInstance()->bmap->isblock(this->getPosition()+endPos)){
-//        this->invert();
-//        endPos=this->getEndPos();
-//    }
-//    Sequence* seq=Sequence::create(MoveBy::create(0.6, endPos),CallFunc::create(CC_CALLBACK_0(BNpc::run, this)), NULL);
-//    this->runAction(seq);
-}
-
-void Hero::follow(Hero* hero)
-{
-    this->preHero=hero;
-    Vec2 pos=hero->getPosition();
-    this->unschedule(SEL_SCHEDULE(&BNpc::timerAi));
-    
-//    RepeatForever* repeat=RepeatForever::create(MoveTo::create(1/30, hero->getPosition()));
-//    this->runAction(repeat);
-//    this->runAction(MoveTo::create(0.8, pos));
-//    this->setDir(hero->dir);
-//    if(!this->sprite->getActionByTag(HERO_WALK)){
-//        this->walk();
-//    }
-}

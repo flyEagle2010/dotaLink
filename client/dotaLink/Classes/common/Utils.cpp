@@ -28,27 +28,7 @@ double Utils::distance(Vec2 sp,Vec2 ep)
 {
     return sqrt((ep.x-sp.x)*(ep.x-sp.x)+(ep.y-sp.y)*(ep.y-sp.y));
 }
-/*
-bool Utils::sortFar(MFighter* f1, MFighter* f2)
-{
-    return f1->getGrid()-f2->getGrid() > 0;
-}
 
-bool Utils::sortNear(MFighter* f1, MFighter* f2)
-{
-    return f1->getGrid()-f2->getGrid() < 0;
-}
-
-bool Utils::sortLessHp(MFighter* f1, MFighter* f2)
-{
-    return f1->data->hp<f2->data->hp;
-}
-
-bool Utils::sortMoreHp(MFighter* f1, MFighter* f2)
-{
-    return f1->data->hp>f2->data->hp;
-}
-*/
 std::vector<int> Utils::randSeveral(int num,bool isRepeat)
 {
     std::vector<int> arr;

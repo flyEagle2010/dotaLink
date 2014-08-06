@@ -58,8 +58,6 @@ bool BattleMap::init()
 void BattleMap::onEnter()
 {
     Node::onEnter();
-    
-
 }
 
 void BattleMap::createHero(int type)
@@ -98,7 +96,6 @@ void BattleMap::createHero(int type)
                 this->tileMap->addChild(npc);
                 npc->setPosition(x,y);
                 npc->run();
-//                MNpc* mNpc=MNpc::create(npc);
                 this->npcs.pushBack(npc);
 
             }
@@ -181,19 +178,34 @@ bool BattleMap::isblock(Vec2 pos)
     return false;
 }
 
-Vector<BNpc*> BattleMap::getTargets(std::vector<Vec2> arr,int type)
+Vector<BNpc*> BattleMap::getTargets(int xID,BNpc* attacker)
 {
+    XRange* xr=XRange::record(Value(xID));
+    std::vector<std::string> grids=Utils::split(xr->getRange(),",");
+    
     Vector<BNpc*> targets;
-    Vector<BNpc*> npcs=type==0?this->npcs:this->team->items;
-    for(int i=0;i<npcs.size();i++){
-        BNpc* npc=npcs.at(i);
-        Vec2 grid=this->tileCoordForPosition(npc->getPosition());
-        for(int j=0;j<arr.size();j++){
-            if (grid.x==arr.at(j).x && grid.y==arr.at(j).y) {
-                targets.pushBack(npc);
-                break;
-            }
+    for(int i=0;i<grids.size();i++){
+        Vec2 grid=PointFromString(grids.at(i));
+        if(grid.x==0 && grid.y==0){
+            continue;
         }
+        BNpc* npc=npcs.at(i);
+        Vec2 attackerGrid=this->tileCoordForPosition(attacker->getPosition());
+        if(attacker->type==1){
+            
+        }
+        if(attacker->type==2){
+            
+        }
+        if(attacker->type==3){
+            
+        }
+//        for(int j=0;j<arr.size();j++){
+//            if (grid.x==arr.at(j).x && grid.y==arr.at(j).y) {
+//                targets.pushBack(npc);
+//                break;
+//            }
+//        }
     }
     return targets;
 }

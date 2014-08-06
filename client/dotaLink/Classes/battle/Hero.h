@@ -20,12 +20,8 @@ public:
     static Hero* create(int xid);
     virtual bool init(int xid);
     virtual void update(float dt);
-    virtual void run();
-    void follow(Hero* hero);
-
 public:
     Hero* preHero;
-//    Vec2 prePos;
     std::vector<Vec3> positiones;
 
 private:

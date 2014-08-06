@@ -32,7 +32,7 @@ void MNpc::initSkill()
     for(int i=0;i<2;i++){
         int skillID=skills[rand()%skills.size()];
         Skill* skill=Skill::create(skillID);
-        skill->npc=this;
+//        skill->npc=this;
         this->skills.pushBack(skill);
     }
 }
