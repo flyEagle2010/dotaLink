@@ -147,13 +147,12 @@
 		BF2834E919610FB200B558FE /* progressBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2834E319610FB200B558FE /* progressBg.png */; };
 		BF2834F21961157700B558FE /* BattleMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2834F01961157700B558FE /* BattleMap.cpp */; };
 		BF2835091962453600B558FE /* BNpc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2835071962453600B558FE /* BNpc.cpp */; };
-		BF28350C19624A9300B558FE /* Team.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF28350A19624A9300B558FE /* Team.cpp */; };
 		BF2C813A1965435500A03CAD /* MNpc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2C81381965435500A03CAD /* MNpc.cpp */; };
 		BF2C813D1965440500A03CAD /* Skill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2C813B1965440500A03CAD /* Skill.cpp */; };
 		BF2C81401965441100A03CAD /* Buff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2C813E1965441100A03CAD /* Buff.cpp */; };
 		BF2C81431965537800A03CAD /* Npc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2C81411965537800A03CAD /* Npc.cpp */; };
 		BF2C8146196554EB00A03CAD /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2C8144196554EB00A03CAD /* Hero.cpp */; };
-		BF82E48B1990C4E40016E953 /* Team2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF82E4891990C4E40016E953 /* Team2.cpp */; };
+		BF82E48B1990C4E40016E953 /* Team.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF82E4891990C4E40016E953 /* Team.cpp */; };
 		BFA06E92196BFF7900B1AF40 /* XBuff.json in Resources */ = {isa = PBXBuildFile; fileRef = BFA06E89196BFF7900B1AF40 /* XBuff.json */; };
 		BFA06E93196BFF7900B1AF40 /* XExp.json in Resources */ = {isa = PBXBuildFile; fileRef = BFA06E8A196BFF7900B1AF40 /* XExp.json */; };
 		BFA06E94196BFF7900B1AF40 /* XGate.json in Resources */ = {isa = PBXBuildFile; fileRef = BFA06E8B196BFF7900B1AF40 /* XGate.json */; };
@@ -473,8 +472,6 @@
 		BF2834F11961157700B558FE /* BattleMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleMap.h; sourceTree = "<group>"; };
 		BF2835071962453600B558FE /* BNpc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BNpc.cpp; sourceTree = "<group>"; };
 		BF2835081962453600B558FE /* BNpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNpc.h; sourceTree = "<group>"; };
-		BF28350A19624A9300B558FE /* Team.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Team.cpp; sourceTree = "<group>"; };
-		BF28350B19624A9300B558FE /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		BF2C81381965435500A03CAD /* MNpc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MNpc.cpp; sourceTree = "<group>"; };
 		BF2C81391965435500A03CAD /* MNpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNpc.h; sourceTree = "<group>"; };
 		BF2C813B1965440500A03CAD /* Skill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Skill.cpp; sourceTree = "<group>"; };
@@ -485,8 +482,8 @@
 		BF2C81421965537800A03CAD /* Npc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Npc.h; sourceTree = "<group>"; };
 		BF2C8144196554EB00A03CAD /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
 		BF2C8145196554EB00A03CAD /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
-		BF82E4891990C4E40016E953 /* Team2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Team2.cpp; sourceTree = "<group>"; };
-		BF82E48A1990C4E40016E953 /* Team2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team2.h; sourceTree = "<group>"; };
+		BF82E4891990C4E40016E953 /* Team.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Team.cpp; sourceTree = "<group>"; };
+		BF82E48A1990C4E40016E953 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		BFA06E89196BFF7900B1AF40 /* XBuff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XBuff.json; sourceTree = "<group>"; };
 		BFA06E8A196BFF7900B1AF40 /* XExp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XExp.json; sourceTree = "<group>"; };
 		BFA06E8B196BFF7900B1AF40 /* XGate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XGate.json; sourceTree = "<group>"; };
@@ -931,16 +928,14 @@
 			isa = PBXGroup;
 			children = (
 				BF2C814719655CCF00A03CAD /* view */,
-				BF28350A19624A9300B558FE /* Team.cpp */,
-				BF28350B19624A9300B558FE /* Team.h */,
 				BF2C81381965435500A03CAD /* MNpc.cpp */,
 				BF2C81391965435500A03CAD /* MNpc.h */,
 				BF2C813B1965440500A03CAD /* Skill.cpp */,
 				BF2C813C1965440500A03CAD /* Skill.h */,
 				BF2C813E1965441100A03CAD /* Buff.cpp */,
 				BF2C813F1965441100A03CAD /* Buff.h */,
-				BF82E4891990C4E40016E953 /* Team2.cpp */,
-				BF82E48A1990C4E40016E953 /* Team2.h */,
+				BF82E4891990C4E40016E953 /* Team.cpp */,
+				BF82E48A1990C4E40016E953 /* Team.h */,
 			);
 			name = battle;
 			path = ../Classes/battle;
@@ -1263,8 +1258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF82E48B1990C4E40016E953 /* Team2.cpp in Sources */,
-				BF28350C19624A9300B558FE /* Team.cpp in Sources */,
+				BF82E48B1990C4E40016E953 /* Team.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				BF28348D196105B500B558FE /* DeviceInfo.mm in Sources */,
 				BFA06EB9196C026400B1AF40 /* XGateExp.cpp in Sources */,

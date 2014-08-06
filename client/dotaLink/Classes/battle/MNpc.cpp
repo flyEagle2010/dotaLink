@@ -22,8 +22,6 @@ MNpc* MNpc::create(BNpc* view)
 
 bool MNpc::init(BNpc* view)
 {
-    this->view=view;
-//    this->view->run();
     this->initSkill();
     return true;
 }
@@ -43,7 +41,6 @@ void MNpc::attack()
 {
     Skill* pSkill=this->selectSkill();
     pSkill->start();
-    this->view->attack();
 }
 
 Skill* MNpc::selectSkill()

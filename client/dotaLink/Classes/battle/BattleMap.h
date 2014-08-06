@@ -17,7 +17,7 @@
 #include "Npc.h"
 #include "BNpc.h"
 #include "MNpc.h"
-#include "Team2.h"
+#include "Team.h"
 USING_NS_CC;
 
 class MNpc;
@@ -57,6 +57,6 @@ private:
     TMXLayer* blockLayer;
     
     Vector<BNpc*> npcs;
-    Team2* team;
+    Team* team;
 };
 #endif /* defined(__dotaLink__BattleMap__) */

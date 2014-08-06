@@ -74,7 +74,7 @@ void BattleMap::createHero(int type)
         this->player->setIsLead(true);
         this->player->setPosition(x,y);
         this->tileMap->addChild(player,0);
-        this->team=Team2::create(player);
+        this->team=Team::create(player);
         
         Hero* player2=Hero::create(103);
         player2->type=type;
