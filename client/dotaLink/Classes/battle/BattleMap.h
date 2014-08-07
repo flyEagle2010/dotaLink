@@ -47,7 +47,7 @@ private:
     void update(float dt);
     void pickUp();
     void setViewPointCenter(cocos2d::Point position);
-    Vec2 tileCoordForPosition(Vec2 position);
+    Vec2 position2Grid(Vec2 position);
 private:
 	cocos2d::TMXTiledMap *tileMap;
 	cocos2d::TMXLayer *background;

@@ -60,19 +60,18 @@ public:
     void invert();
     void setDir(Dir value);
     Dir getDir();
+    Vec2 getEndPos();
     
-    HState state;
 protected:
     Animation* createAnimation(const char* formatStr, int frameCount, int fps);
-    Vec2 getEndPos();
     void initSkill();
 protected:
-    Sprite* sprite;
     int xid;
     Dir dir;
     int skillID;
 public:
     int type; //1hero 2npc 3boss
-//    Skill* skill;
+    Sprite* sprite;
+    HState state;
 };
 #endif /* defined(__dotaLink__BNpc__) */

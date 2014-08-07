@@ -35,8 +35,11 @@ Hero* Team::getLeader()
 
 void Team::addMember(Hero *hero)
 {
-    hero->preHero=(Hero*)this->items.at(items.size()-1);
+    Hero* preHero=(Hero*)this->items.at(items.size()-1);
+    hero->preHero=preHero;
     this->items.pushBack(hero);
     hero->setDir(items.at(0)->getDir());
+    Vec2 position=preHero->getPosition()+(-hero->getEndPos()*0.5);
+    hero->setPosition(position);
     hero->run();
 }

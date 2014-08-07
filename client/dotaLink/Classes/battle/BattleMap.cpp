@@ -27,13 +27,15 @@ bool BattleMap::init()
     auto str=String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(fileName.c_str()).c_str());
     
     this->tileMap=TMXTiledMap::createWithXML(str->getCString(), "");
-    this->createHero(1);
-    this->setViewPointCenter(player->getPosition());
-    
     this->coverLayer=tileMap->getLayer("coverLayer");
     this->blockLayer=tileMap->getLayer("blockLayer");
     this->blockLayer->setVisible(false);
     this->addChild(tileMap, -1,100);
+    
+    this->createHero(1);
+    this->setViewPointCenter(player->getPosition());
+    
+    
    
     
 //    TMXObjectGroup* buildGroup=this->tileMap->getObjectGroup("build");
@@ -72,20 +74,23 @@ void BattleMap::createHero(int type)
         this->player->setIsLead(true);
         this->player->setPosition(x,y);
         this->tileMap->addChild(player,0);
+//        this->coverLayer->addChild(player);
         this->team=Team::create(player);
         
         Hero* player2=Hero::create(103);
         player2->type=type;
         player2->setIsLead(false);
         player2->preHero=player;
-        player2->setPosition(x-75,y);
         tileMap->addChild(player2,0);
+//        this->coverLayer->addChild(player2);
         this->team->addMember(player2);
+        this->team->retain();
     }
     type=2;
     int ids[6]={102,103,201,301,302,401};
     if(type==2){
         ValueVector vec=objectGroup->getObjects();
+        log("npc size:%zd",vec.size());
         for(int i=0;i<vec.size();i++){
             ValueMap v=vec[i].asValueMap();
             if(v["name"].asString()=="npc"){
@@ -94,6 +99,7 @@ void BattleMap::createHero(int type)
                 float x=v["x"].asDouble();
                 float y=v["y"].asDouble();
                 this->tileMap->addChild(npc);
+//                this->coverLayer->addChild(npc);
                 npc->setPosition(x,y);
                 npc->run();
                 this->npcs.pushBack(npc);
@@ -118,11 +124,15 @@ void BattleMap::setViewPointCenter(cocos2d::Point position)
 }
 
 
-Point BattleMap::tileCoordForPosition(Point position)
+Vec2 BattleMap::position2Grid(Point position)
 {
+    log("before pos:%f,%f",position.x,position.y);
+    position=CC_POINT_POINTS_TO_PIXELS(position);
+    log("after pos:%f,%f",position.x,position.y);
     int x = position.x / tileMap->getTileSize().width;
-    int y =((tileMap->getMapSize().height * tileMap->getTileSize().height) - position.y) / tileMap->getTileSize().height-1;
-    return Point(x, y);
+//    int y = position.y / tileMap->getTileSize().height;
+    int y =((tileMap->getMapSize().height * tileMap->getTileSize().height) - position.y) / tileMap->getTileSize().height;
+    return Vec2(x, y);
 }
 
 
@@ -130,7 +140,7 @@ void BattleMap::pickUp()
 {
 //    for(Hero* hero : team)
     {
-//        Point tileCoord = this->tileCoordForPosition(hero->getPosition());
+//        Point tileCoord = this->position2Grid(hero->getPosition());
         //int tileGid = this->tileLayer->getTileGIDAt(tileCoord);
 //        auto collectable = this->tileMap->getPropertiesForGID(tileGid)["Collectable"].asString();
 //        if ("True" == collectable) {
@@ -145,8 +155,9 @@ void BattleMap::pickUp()
 
 void BattleMap::update(float dt)
 {
-    this->setViewPointCenter(player->getPosition());
     this->sortDepth();
+
+    this->setViewPointCenter(player->getPosition());
 }
 
 bool BattleMap::isblock(Vec2 pos)
@@ -165,13 +176,13 @@ bool BattleMap::isblock(Vec2 pos)
         return true;
     } 
     */
-    Vec2 grid=this->tileCoordForPosition(pos);
+    Vec2 grid=this->position2Grid(pos);
     int tileGrid=this->blockLayer->getTileGIDAt(grid);
     Value properties=tileMap->getPropertiesForGID(tileGrid);
     if(properties.getType()==Value::Type::MAP){
         ValueMap map=properties.asValueMap();
-        auto isBlock = map["isBlock"].asString();
-        if ("true" == isBlock) {
+        auto block = map["isBlock"].asString();
+        if ("true" == block) {
             return true;
         }
     }
@@ -189,55 +200,87 @@ Vector<BNpc*> BattleMap::getTargets(int xID,BNpc* attacker)
         if(grid.x==0 && grid.y==0){
             continue;
         }
-        BNpc* npc=npcs.at(i);
-        Vec2 attackerGrid=this->tileCoordForPosition(attacker->getPosition());
+
+        Vec2 attackerGrid=this->position2Grid(attacker->getPosition());
+        Vector<BNpc*> tmpArr;
+        //英雄
         if(attacker->type==1){
-            
+            tmpArr=this->npcs;
         }
-        if(attacker->type==2){
-            
+        //怪物 boss
+        if(attacker->type==2 || attacker->type==3){
+            tmpArr=this->team->items;
         }
-        if(attacker->type==3){
-            
+        for(BNpc* hero : tmpArr){
+            Vec2 heroGrid=this->position2Grid(hero->getPosition());
+            if(heroGrid==attackerGrid+grid){
+                targets.pushBack(hero);
+            }
         }
-//        for(int j=0;j<arr.size();j++){
-//            if (grid.x==arr.at(j).x && grid.y==arr.at(j).y) {
-//                targets.pushBack(npc);
-//                break;
-//            }
-//        }
     }
     return targets;
 }
 
 void BattleMap::sortDepth()
 {
+    /*
     auto p = this->player->getPosition();
     p = CC_POINT_POINTS_TO_PIXELS(p);
-    Sprite* sprite=this->coverLayer->getTileAt(this->tileCoordForPosition(p));
-    this->tileMap->reorderChild(player, 0);
-    if(sprite){
+    Sprite* sprite=this->coverLayer->getTileAt(this->position2Grid(p));
+//    this->tileMap->reorderChild(player, 0);
+    if(!sprite){
+        log("zorder:%d",this->coverLayer->getZOrder());
+        return;
+    }
+    for(auto hero : this->team->items){
         auto sp=sprite->getPosition();
         if(sp.y-75>=p.y){
-            this->tileMap->reorderChild(player, 2);
+            this->tileMap->reorderChild(hero, 3);
         } else{
-            this->tileMap->reorderChild(player, 0);
+            this->tileMap->reorderChild(hero, 0);
         }
     }
     for(auto npc : this->npcs){
         this->tileMap->reorderChild(npc, 0);
         auto p = npc->getPosition();
         p = CC_POINT_POINTS_TO_PIXELS(p);
-        Sprite* sprite=this->coverLayer->getTileAt(this->tileCoordForPosition(p));
-        if(sprite){
-            auto sp=sprite->getPosition();
-            if(sp.y-75>=p.y){
-                this->tileMap->reorderChild(npc,2);
-            } else{
-                this->tileMap->reorderChild(npc, 0);
+        auto sp=sprite->getPosition();
+        if(sp.y-75>=p.y){
+            this->tileMap->reorderChild(npc, 3);
+        } else{
+            this->tileMap->reorderChild(npc, 0);
+        }
+    }
+    */
+    if(this->npcs.size()==0 || !this->team || this->team->items.size()==0){
+        return;
+    }
+    Vector<BNpc*> items;//=this->npcs;
+    items.pushBack(npcs);
+    items.pushBack(this->team->items);
+    int gridWidth=tileMap->getMapSize().width;
+    int gridHeight=tileMap->getMapSize().height;
+    for(int i=0;i<gridWidth;i++){
+        for(int j=0;j<gridHeight;j++){
+            Sprite* sprite=this->coverLayer->getTileAt(Vec2(i,j));
+            if(!sprite){
+                continue;
+            }
+            for(auto hero : items){
+                Vec2 pos=hero->getPosition();
+                Vec2 heroGrid=this->position2Grid(hero->getPosition());
+                if(heroGrid!= Vec2(i,j)){
+                    break;
+                }
+                if(sprite->getPositionY()+75 >= pos.y){
+                    this->tileMap->reorderChild(hero, 5);
+                } else{
+                    this->tileMap->reorderChild(hero, 0);
+                }
             }
         }
     }
+    items.clear();
 }
 
 void BattleMap::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event)
