@@ -255,9 +255,8 @@ void BattleMap::sortDepth()
     if(this->npcs.size()==0 || !this->team || this->team->items.size()==0){
         return;
     }
-//    Vector<BNpc*> items;//=this->npcs;
-//    items.pushBack(npcs);
-//    items.pushBack(this->team->items);
+    Vector<BNpc*> items=this->npcs;
+    items.pushBack(this->team->items);
     int gridWidth=tileMap->getMapSize().width;
     int gridHeight=tileMap->getMapSize().height;
     for(int i=0;i<gridWidth;i++){
@@ -266,11 +265,11 @@ void BattleMap::sortDepth()
             if(!sprite){
                 continue;
             }
-            for(auto hero : this->team->items){
+            for(auto hero : items){
                 Vec2 heroPos=hero->getPosition();
                 Vec2 heroGrid=this->position2Grid(heroPos);
                 if(heroGrid!= Vec2(i,j)){
-                    break;
+                    continue;
                 }
                 if(sprite->getPositionY()+75 >= heroPos.y){
                     this->tileMap->reorderChild(hero, 5);
@@ -278,21 +277,9 @@ void BattleMap::sortDepth()
                     this->tileMap->reorderChild(hero, 0);
                 }
             }
-            for(auto npc : this->npcs){
-                Vec2 npcPos=npc->getPosition();
-                Vec2 npcGrid=this->position2Grid(npcPos);
-                if(npcGrid!= Vec2(i,j)){
-                    continue;
-                }
-                if(sprite->getPositionY()+75 >= npcPos.y){
-                    this->tileMap->reorderChild(npc, 5);
-                } else{
-                    this->tileMap->reorderChild(npc, 0);
-                }
-            }
         }
     }
-//    items.clear();
+    items.clear();
 }
 
 void BattleMap::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event)
